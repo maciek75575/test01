@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<script src="angular.js"></script>
+</head>
+<body ng-app="test01" ng-controller="ctrl">
+
+<input ng-model="text"><br>
+{{text}}<br>
+
+<input ng-model="find">
+
+<ul>
+	<li ng-repeat="it in tab | filter: find">{{it}}</li>
+</ul>
+
+<div ng-if="text">
+Pojawiam się i znikam!
+</div>
+
+<script src="script.js"></script>
+</html>
+</body>
